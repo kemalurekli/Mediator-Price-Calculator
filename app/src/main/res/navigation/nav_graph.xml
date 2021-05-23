@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kemalurekli.pricecalculator.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_secondPartFragment"
+            app:destination="@id/secondPartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_firstPartFragment"
+            app:destination="@id/firstPartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_datePartFragment"
+            app:destination="@id/datePartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstPartFragment"
+        android:name="com.kemalurekli.pricecalculator.view.FirstPartFragment"
+        android:label="fragment_first_part"
+        tools:layout="@layout/fragment_first_part" />
+    <fragment
+        android:id="@+id/datePartFragment"
+        android:name="com.kemalurekli.pricecalculator.view.DatePartFragment"
+        android:label="fragment_date_part"
+        tools:layout="@layout/fragment_date_part" />
+    <fragment
+        android:id="@+id/secondPartFragment"
+        android:name="com.kemalurekli.pricecalculator.view.SecondPartFragment"
+        android:label="fragment_second_part"
+        tools:layout="@layout/fragment_second_part" >
+        <action
+            android:id="@+id/action_secondPartFragment_to_secondPartDetailsFragment"
+            app:destination="@id/secondPartDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondPartDetailsFragment"
+        android:name="com.kemalurekli.pricecalculator.view.SecondPartDetailsFragment"
+        android:label="fragment_second_part_details"
+        tools:layout="@layout/fragment_second_part_details" />
+</navigation>
