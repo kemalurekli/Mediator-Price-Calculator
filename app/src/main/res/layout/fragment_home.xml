@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.HomeFragment">
+    tools:context=".view.HomeFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/goToFirstPartButton"
+        android:text="@string/first_part_name"
+        android:layout_weight="1"
+        android:layout_margin="5dp">
+    </com.google.android.material.button.MaterialButton>
 
-</FrameLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/goToSecondPartButton"
+        style="@android:style/Animation"
+        android:layout_weight="1"
+        android:text="@string/second_part_name"
+        android:layout_margin="5dp"
+        >
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/goToDatePartButton"
+        android:layout_weight="1"
+        android:text="@string/date_part_name"
+        android:layout_margin="5dp">
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/goToApp"
+        android:layout_weight="1"
+        android:text="@string/last_part_name"
+        android:layout_margin="5dp">
+    </com.google.android.material.button.MaterialButton>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

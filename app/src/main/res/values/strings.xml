@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">PriceCalculator</string>
+    <string name="app_name">Arabuluculuk Ücret Hesaplama</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_part_name">Arabuluculuk Ücreti Hesaplama \n (Saat Ücreti - AAÜT Birinci Kısım)</string>
+    <string name="second_part_name">Arabuluculuk Ücreti Hesaplama \n (Nisbi Ücreti - AAÜT İkinci Kısım)</string>
+    <string name="date_part_name">Süre Hesaplama \n (Dava Şartı Uygulamalarında)</string>
+    <string name="last_part_name">Uygulama Hakkında \n (Kullanım Şartları)</string>
 </resources>
