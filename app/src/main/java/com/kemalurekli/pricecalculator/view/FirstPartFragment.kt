@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.core.view.get
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.kemalurekli.pricecalculator.R
@@ -20,9 +22,9 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private var _binding: FragmentFirstPartBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel : FirstPartFragmentViewModel
-    private var select1 : Int? = null
-
-
+    private var userInputTime: Int = 0
+    private var spinner1Position : Int = 0
+    private var spinner2Position : Int = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,7 +39,10 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
         viewModel = ViewModelProvider(this)[FirstPartFragmentViewModel::class.java]
         viewModel.getParameters()
-        observeLiveData()
+
+
+
+
         //For Spinner
         val spinner: Spinner = binding.firstSpinner
         val spinner2 : Spinner = binding.secondSpinner
@@ -54,22 +59,54 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
         }
 
 
-    }
-    private fun observeLiveData() {
 
-        viewModel.getParameters.observe(viewLifecycleOwner, Observer {getParameters ->
-            getParameters?.let {
-                val dataone = getParameters[0].firstPartData1
-            }
-        })
+        binding.hesapla.setOnClickListener {
+            //get User Input Data
+            userInputTime = binding.userInputTime.text.toString().toInt()
+            spinner1Position = spinner.selectedItemPosition
+            spinner2Position = spinner2.selectedItemPosition
+            //Calculate with a function from viewmodel.
+            viewModel.CalculateFirstPart(userInputTime,spinner1Position,spinner2Position)
+
+
+        }
+
+
+
     }
+
+
+
+
+
+
+
+
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        select1 = position
-        println(select1)
+        //userInput1 = position
+
+            //println(parent!!.adapter.)
+
+
+
+
+
     }
 
-    override fun onNothingSelected(parent: AdapterView<*>?) {}
+    override fun onNothingSelected(parent: AdapterView<*>?) {
+
+    }
+
+
+
+
+
+
+
+
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

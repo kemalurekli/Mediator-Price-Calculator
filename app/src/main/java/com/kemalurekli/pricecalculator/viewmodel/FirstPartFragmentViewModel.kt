@@ -19,7 +19,19 @@ class FirstPartFragmentViewModel : ViewModel() {
         getParameters.value = parameterList
 
     }
-    
+
+
+
+    fun CalculateFirstPart (timeInput : Int, firstSpinnerPosition : Int, secondSpinnerPosition : Int,){
+
+        println("hesaplama gerçekleşti.")
+
+        println(timeInput)
+        println(firstSpinnerPosition)
+        println(secondSpinnerPosition)
+
+    }
+
 
 
 

@@ -7,13 +7,24 @@
     tools:context=".view.FirstPartFragment">
 
 
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userInputTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="number"
+        android:layout_margin="5dp">
+    </androidx.appcompat.widget.AppCompatEditText>
+
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/firstSpinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userInputTime"
         android:layout_margin="5dp" />
 
     <Spinner
@@ -25,6 +36,16 @@
         app:layout_constraintTop_toBottomOf="@id/firstSpinner"
         android:layout_margin="5dp" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hesapla"
+        android:id="@+id/hesapla"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondSpinner"
+        android:layout_margin="20dp">
+    </Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
