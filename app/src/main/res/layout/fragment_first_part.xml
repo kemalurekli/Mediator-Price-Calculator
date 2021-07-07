@@ -59,12 +59,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="300dp"
         android:id="@+id/tv_first_part_exp"
+        android:padding="7dp"
         android:text="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hesapla"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/black"
+        android:background="@drawable/result_bg"
         android:layout_margin="5dp">
     </TextView>
 
