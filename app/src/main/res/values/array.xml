@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="planets_array">
-    <item>Mercury</item>
-    <item>Venus</item>
-    <item>Earth</item>
-    <item>Mars</item>
-    <item>Jupiter</item>
-    <item>Saturn</item>
-    <item>Uranus</item>
-    <item>Neptune</item>
+    <string-array name="first_part_first_spinner">
+    <item>Aile Hukuku ile ilgili uyuşmazlıklarda</item>
+    <item>Ticari uyuşmazlıklarda</item>
+    <item>İşçi - işveren uyuşmazlıklarında</item>
+    <item>Tüketici uyuşmazlıklarında</item>
+    <item>Diğer tür uyuşmazlıklarda</item>
 </string-array>
 
-    <string-array name="months_array">
-        <item>January</item>
-        <item>February</item>
-        <item>March</item>
-        <item>April</item>
-        <item>June</item>
-        <item>July</item>
-        <item>August</item>
-        <item>Semptember</item>
-        <item>October</item>
-        <item>November</item>
-        <item>December</item>
+    <string-array name="first_part_second_spinner">
+        <item>2 taraflı işlerde</item>
+        <item>3-5 taraflı işlerde</item>
+        <item>6-10 taraflı işlerde</item>
+        <item>11 ve daha fazla taraflı işlerde</item>
     </string-array>
 </resources>

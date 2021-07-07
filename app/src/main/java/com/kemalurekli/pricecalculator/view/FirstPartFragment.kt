@@ -21,10 +21,14 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private var _binding: FragmentFirstPartBinding? = null
     private val binding get() = _binding!!
+
+
     private lateinit var viewModel : FirstPartFragmentViewModel
-    private var userInputTime: Int = 0
+
+    private var userInputTime: Int = 3
     private var spinner1Position : Int = 0
     private var spinner2Position : Int = 0
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,19 +45,18 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
         viewModel.getParameters()
 
 
-
-
         //For Spinner
         val spinner: Spinner = binding.firstSpinner
         val spinner2 : Spinner = binding.secondSpinner
         spinner.onItemSelectedListener = this
         spinner2.onItemSelectedListener = this
 
-        ArrayAdapter.createFromResource(requireContext(), R.array.planets_array, android.R.layout.simple_spinner_item).also { adapter ->
+        //Spinner Adapters
+        ArrayAdapter.createFromResource(requireContext(), R.array.first_part_first_spinner, android.R.layout.simple_spinner_item).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner.adapter = adapter
         }
-        ArrayAdapter.createFromResource(requireContext(), R.array.months_array, android.R.layout.simple_spinner_item).also { adapter2 ->
+        ArrayAdapter.createFromResource(requireContext(), R.array.first_part_second_spinner, android.R.layout.simple_spinner_item).also { adapter2 ->
             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner2.adapter = adapter2
         }

@@ -22,7 +22,7 @@ class FirstPartFragmentViewModel : ViewModel() {
 
 
 
-    fun CalculateFirstPart (timeInput : Int, firstSpinnerPosition : Int, secondSpinnerPosition : Int,){
+    fun CalculateFirstPart (timeInput : Int, firstSpinnerPosition : Int, secondSpinnerPosition : Int){
 
         println("hesaplama gerçekleşti.")
 
