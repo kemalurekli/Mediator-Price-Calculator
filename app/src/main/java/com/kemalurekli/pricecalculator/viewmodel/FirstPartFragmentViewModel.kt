@@ -17,11 +17,12 @@ class FirstPartFragmentViewModel : ViewModel() {
         getParameters.value = parameterList
     }
 
-    fun CalculateFirstPart (timeInput : Int, firstSpinnerPosition : Int, secondSpinnerPosition : Int){
+    fun CalculateFirstPart (timeInput : Int, firstSpinnerPosition : Int, secondSpinnerPosition : Int) : Int{
         println("hesaplama gerçekleşti.")
         println("Girilen değer : $timeInput")
         println("İlk Spinner :  $firstSpinnerPosition")
         println("İkinci Spinner : $secondSpinnerPosition")
+        return timeInput * firstSpinnerPosition * 10
     }
 
 
