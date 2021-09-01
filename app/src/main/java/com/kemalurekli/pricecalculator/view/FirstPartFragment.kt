@@ -69,7 +69,7 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
             spinner2Position = spinner2.selectedItemPosition
             //Calculate with a function from viewmodel.
             var result = viewModel.CalculateFirstPart(userInputTime,spinner1Position,spinner2Position)
-            binding.tvFirstPartExp.text = "Hesaplanan Değer : $result'dır."
+            binding.tvFirstPartExp.text = "${spinner.selectedItem.toString()} ${spinner2.selectedItem.toString()} Hesaplanan Değer : $result'dır. "
         }
 
 
