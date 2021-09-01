@@ -13,26 +13,16 @@ class FirstPartFragmentViewModel : ViewModel() {
 
     fun getParameters() {
         val parameter1 = ParameterData("111","3232","3232","322323")
-
         val parameterList = arrayListOf<ParameterData>(parameter1)
-
         getParameters.value = parameterList
-
     }
-
-
 
     fun CalculateFirstPart (timeInput : Int, firstSpinnerPosition : Int, secondSpinnerPosition : Int){
-
         println("hesaplama gerçekleşti.")
-
-        println(timeInput)
-        println(firstSpinnerPosition)
-        println(secondSpinnerPosition)
-
+        println("Girilen değer : $timeInput")
+        println("İlk Spinner :  $firstSpinnerPosition")
+        println("İkinci Spinner : $secondSpinnerPosition")
     }
-
-
 
 
 }

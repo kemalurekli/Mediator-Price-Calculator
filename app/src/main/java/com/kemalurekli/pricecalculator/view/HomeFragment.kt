@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
             Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToDatePartFragment())
         }
         binding.goToApp.setOnClickListener {
-
+            Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToAboutFragment())
         }
 
     }

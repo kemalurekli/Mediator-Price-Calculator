@@ -22,7 +22,6 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private var _binding: FragmentFirstPartBinding? = null
     private val binding get() = _binding!!
 
-
     private lateinit var viewModel : FirstPartFragmentViewModel
 
     private var userInputTime: Int = 3
@@ -70,8 +69,6 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
             spinner2Position = spinner2.selectedItemPosition
             //Calculate with a function from viewmodel.
             viewModel.CalculateFirstPart(userInputTime,spinner1Position,spinner2Position)
-
-
         }
 
 

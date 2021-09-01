@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_datePartFragment"
             app:destination="@id/datePartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
     <fragment
         android:id="@+id/firstPartFragment"
@@ -44,4 +47,9 @@
         android:name="com.kemalurekli.pricecalculator.view.SecondPartDetailsFragment"
         android:label="fragment_second_part_details"
         tools:layout="@layout/fragment_second_part_details" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.kemalurekli.pricecalculator.view.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>
