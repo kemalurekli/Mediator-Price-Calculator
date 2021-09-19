@@ -19,55 +19,50 @@ class FirstPartFragmentViewModel : ViewModel() {
         getParameters.value = parameterList
     }
 
-    fun CalculateFirstPart (timeInput : Int, firstSpinnerPosition : Int, secondSpinnerPosition : Int) : Int{
+    fun calculateFirstPart (timeInput : Int, firstSpinnerPosition : Int, secondSpinnerPosition : Int) : Int{
         when(firstSpinnerPosition) {
             0 -> {
                 when (secondSpinnerPosition) {
-                    0 -> priceOffirstPart=360
-                    1 -> priceOffirstPart=380
-                    2 -> priceOffirstPart=400
-                    3 -> priceOffirstPart=420
-
+                    0 -> priceOffirstPart=340
+                    1 -> priceOffirstPart=360
+                    2 -> priceOffirstPart=380
+                    3 -> priceOffirstPart=400
                 }
             }
             1 -> {
                 when (secondSpinnerPosition) {
-                    0 -> priceOffirstPart=460
-                    1 -> priceOffirstPart=480
-                    2 -> priceOffirstPart=500
-                    3 -> priceOffirstPart=520
-
+                    0 -> priceOffirstPart=660
+                    1 -> priceOffirstPart=680
+                    2 -> priceOffirstPart=700
+                    3 -> priceOffirstPart=720
                 }
             }
             2 -> {
                 when (secondSpinnerPosition) {
-                    0 -> priceOffirstPart=460
-                    1 -> priceOffirstPart=480
-                    2 -> priceOffirstPart=400
-                    3 -> priceOffirstPart=420
-
+                    0 -> priceOffirstPart=340
+                    1 -> priceOffirstPart=360
+                    2 -> priceOffirstPart=380
+                    3 -> priceOffirstPart=400
                 }
             }
             3 -> {
                 when (secondSpinnerPosition) {
-                    0 -> priceOffirstPart=360
-                    1 -> priceOffirstPart=380
-                    2 -> priceOffirstPart=400
-                    3 -> priceOffirstPart=420
-
+                    0 -> priceOffirstPart=340
+                    1 -> priceOffirstPart=360
+                    2 -> priceOffirstPart=380
+                    3 -> priceOffirstPart=400
                 }
             }
-
-
-
+            4 -> {
+                when (secondSpinnerPosition) {
+                    0 -> priceOffirstPart=410
+                    1 -> priceOffirstPart=430
+                    2 -> priceOffirstPart=450
+                    3 -> priceOffirstPart=470
+                }
+            }
             else -> priceOffirstPart=0
         }
-        println("hesaplama gerçekleşti.")
-        println("Girilen değer : $timeInput")
-        println("İlk Spinner :  $firstSpinnerPosition")
-        println("İkinci Spinner : $secondSpinnerPosition")
         return timeInput * priceOffirstPart
     }
-
-
 }

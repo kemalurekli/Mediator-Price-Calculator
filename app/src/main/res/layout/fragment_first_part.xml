@@ -62,7 +62,7 @@
         android:minHeight="300dp"
         android:id="@+id/tv_first_part_exp"
         android:padding="7dp"
-        android:text="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
+        android:text="Lütfen Seçim yapınız."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hesapla"
         app:layout_constraintEnd_toEndOf="parent"
