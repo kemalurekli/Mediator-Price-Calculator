@@ -28,7 +28,7 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[FirstPartFragmentViewModel::class.java]
-        viewModel.getParameters()
+        //viewModel.getParameters()
         //For Spinner
         val spinner: Spinner = binding.firstSpinner
         val spinner2 : Spinner = binding.secondSpinner

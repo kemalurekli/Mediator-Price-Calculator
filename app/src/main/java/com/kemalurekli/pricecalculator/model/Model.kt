@@ -1,6 +1,6 @@
 package com.kemalurekli.pricecalculator.model
 
-data class ParameterData(
+data class ParameterForFirstPart(
     val firstPartData1 : String?,
     val firstPartData2 : String?,
     val firstPartData3 : String?,

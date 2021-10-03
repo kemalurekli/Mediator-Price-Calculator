@@ -1,21 +1,22 @@
 package com.kemalurekli.pricecalculator.viewmodel
 
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
-import com.kemalurekli.pricecalculator.model.ParameterData
-import com.kemalurekli.pricecalculator.view.FirstPartFragment
+import com.kemalurekli.pricecalculator.model.ParameterForFirstPart
 
 
 class FirstPartFragmentViewModel : ViewModel() {
-    val getParameters = MutableLiveData<List<ParameterData>>()
+    val getParameters = MutableLiveData<List<ParameterForFirstPart>>()
     var priceOffirstPart = 0
 
-
+    private val parameterFamily = ParameterForFirstPart("340","360","380","400")
+    private val parameterCommercial = ParameterForFirstPart("660","680","700","720")
+    private val parameterWork = ParameterForFirstPart(parameterFamily.firstPartData1,parameterFamily.firstPartData2,parameterFamily.firstPartData3,parameterFamily.firstPartData4)
+    private val parameterConsumer = ParameterForFirstPart(parameterFamily.firstPartData1,parameterFamily.firstPartData2,parameterFamily.firstPartData3,parameterFamily.firstPartData4)
+    private val parameterOther = ParameterForFirstPart("410","430","450","470")
 
     fun getParameters() {
-        val parameter1 = ParameterData("111","3232","3232","322323")
-        val parameterList = arrayListOf<ParameterData>(parameter1)
+        val parameterList = arrayListOf<ParameterForFirstPart>(parameterFamily)
         getParameters.value = parameterList
     }
 
@@ -23,42 +24,42 @@ class FirstPartFragmentViewModel : ViewModel() {
         when(firstSpinnerPosition) {
             0 -> {
                 when (secondSpinnerPosition) {
-                    0 -> priceOffirstPart=340
-                    1 -> priceOffirstPart=360
-                    2 -> priceOffirstPart=380
-                    3 -> priceOffirstPart=400
+                    0 -> priceOffirstPart=parameterFamily.firstPartData1!!.toInt()
+                    1 -> priceOffirstPart=parameterFamily.firstPartData2!!.toInt()
+                    2 -> priceOffirstPart=parameterFamily.firstPartData3!!.toInt()
+                    3 -> priceOffirstPart=parameterFamily.firstPartData4!!.toInt()
                 }
             }
             1 -> {
                 when (secondSpinnerPosition) {
-                    0 -> priceOffirstPart=660
-                    1 -> priceOffirstPart=680
-                    2 -> priceOffirstPart=700
-                    3 -> priceOffirstPart=720
+                    0 -> priceOffirstPart=parameterCommercial.firstPartData1!!.toInt()
+                    1 -> priceOffirstPart=parameterCommercial.firstPartData2!!.toInt()
+                    2 -> priceOffirstPart=parameterCommercial.firstPartData3!!.toInt()
+                    3 -> priceOffirstPart=parameterCommercial.firstPartData4!!.toInt()
                 }
             }
             2 -> {
                 when (secondSpinnerPosition) {
-                    0 -> priceOffirstPart=340
-                    1 -> priceOffirstPart=360
-                    2 -> priceOffirstPart=380
-                    3 -> priceOffirstPart=400
+                    0 -> priceOffirstPart=parameterWork.firstPartData1!!.toInt()
+                    1 -> priceOffirstPart=parameterWork.firstPartData2!!.toInt()
+                    2 -> priceOffirstPart=parameterWork.firstPartData3!!.toInt()
+                    3 -> priceOffirstPart=parameterWork.firstPartData4!!.toInt()
                 }
             }
             3 -> {
                 when (secondSpinnerPosition) {
-                    0 -> priceOffirstPart=340
-                    1 -> priceOffirstPart=360
-                    2 -> priceOffirstPart=380
-                    3 -> priceOffirstPart=400
+                    0 -> priceOffirstPart=parameterConsumer.firstPartData1!!.toInt()
+                    1 -> priceOffirstPart=parameterConsumer.firstPartData2!!.toInt()
+                    2 -> priceOffirstPart=parameterConsumer.firstPartData3!!.toInt()
+                    3 -> priceOffirstPart=parameterConsumer.firstPartData4!!.toInt()
                 }
             }
             4 -> {
                 when (secondSpinnerPosition) {
-                    0 -> priceOffirstPart=410
-                    1 -> priceOffirstPart=430
-                    2 -> priceOffirstPart=450
-                    3 -> priceOffirstPart=470
+                    0 -> priceOffirstPart=parameterOther.firstPartData1!!.toInt()
+                    1 -> priceOffirstPart=parameterOther.firstPartData2!!.toInt()
+                    2 -> priceOffirstPart=parameterOther.firstPartData3!!.toInt()
+                    3 -> priceOffirstPart=parameterOther.firstPartData4!!.toInt()
                 }
             }
             else -> priceOffirstPart=0
