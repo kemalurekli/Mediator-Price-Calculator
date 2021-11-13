@@ -6,7 +6,7 @@ import com.kemalurekli.pricecalculator.model.ParameterForFirstPart
 
 
 class FirstPartFragmentViewModel : ViewModel() {
-    val getParameters = MutableLiveData<List<ParameterForFirstPart>>()
+
     var priceOffirstPart = 0
 
     private val parameterFamily = ParameterForFirstPart("340","360","380","400")
@@ -15,10 +15,7 @@ class FirstPartFragmentViewModel : ViewModel() {
     private val parameterConsumer = ParameterForFirstPart(parameterFamily.firstPartData1,parameterFamily.firstPartData2,parameterFamily.firstPartData3,parameterFamily.firstPartData4)
     private val parameterOther = ParameterForFirstPart("410","430","450","470")
 
-    fun getParameters() {
-        val parameterList = arrayListOf<ParameterForFirstPart>(parameterFamily)
-        getParameters.value = parameterList
-    }
+
 
     fun calculateFirstPart (timeInput : Int, firstSpinnerPosition : Int, secondSpinnerPosition : Int) : Int{
         when(firstSpinnerPosition) {
