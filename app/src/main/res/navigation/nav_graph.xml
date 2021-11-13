@@ -46,7 +46,28 @@
         android:id="@+id/secondPartDetailsFragment"
         android:name="com.kemalurekli.pricecalculator.view.SecondPartDetailsFragment"
         android:label="fragment_second_part_details"
-        tools:layout="@layout/fragment_second_part_details" />
+        tools:layout="@layout/fragment_second_part_details" >
+        <argument
+            android:name="userInputA"
+            app:argType="string"
+            android:defaultValue="0.0" />
+        <argument
+            android:name="select1A"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="select2A"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="select3A"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="select4A"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.kemalurekli.pricecalculator.view.AboutFragment"

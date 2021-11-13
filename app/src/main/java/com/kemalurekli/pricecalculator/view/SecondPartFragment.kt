@@ -7,14 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.kemalurekli.pricecalculator.R
 import com.kemalurekli.pricecalculator.databinding.FragmentSecondPartBinding
-import com.kemalurekli.pricecalculator.viewmodel.FirstPartFragmentViewModel
-import com.kemalurekli.pricecalculator.viewmodel.SecondPartFragmentViewModel
 import java.util.*
 
 
@@ -22,7 +20,6 @@ class SecondPartFragment : Fragment() {
 
     private var _binding: FragmentSecondPartBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel : SecondPartFragmentViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,7 +31,6 @@ class SecondPartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this)[SecondPartFragmentViewModel::class.java]
         val userInput  = binding.userInputCost.text
         val firstInput : Spinner = binding.firstSpinner
         val secondInput : Spinner = binding.secondSpinner
@@ -80,12 +76,10 @@ class SecondPartFragment : Fragment() {
         })
 
         binding.calculateButton.setOnClickListener {
-            userInput.toString().toDouble()
-            firstInput.selectedItemPosition
-            secondInput.selectedItemPosition
-            thirdInput.selectedItemPosition
-            fourthInput.selectedItemPosition
-            println(userInput.toString().toDouble())
+            // viewModel.calculateSecondPartPrice(userInput.toString().toDouble(),firstInput.selectedItemPosition, secondInput.selectedItemPosition, thirdInput.selectedItemPosition, fourthInput.selectedItemPosition)
+            Navigation.findNavController(it).navigate(SecondPartFragmentDirections.actionSecondPartFragmentToSecondPartDetailsFragment(userInput.toString(),firstInput.selectedItemPosition, secondInput.selectedItemPosition, thirdInput.selectedItemPosition, fourthInput.selectedItemPosition))
+
+
         }
 
 

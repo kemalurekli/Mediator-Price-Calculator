@@ -9,4 +9,26 @@
     <string name="enter_time">Saat Giriniz</string>
     <string name="about_and_usage_info">Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.Bu uygulama sadece bilgi amaçlı hazırlanmış olup oluşabilecek kullanıcı zararlarından sorumlu tutulamaz.</string>
     <string name="enter_price">Ücreti Giriniz</string>
+    <string name="col1">Ücret Dilimi</string>
+    <string name="col2">Oran</string>
+    <string name="col4">Ücret</string>
+    <string name="row1dilim">İlk ₺50.000 için</string>
+    <string name="row2dilim">Sonraki ₺80.000</string>
+    <string name="row3dilim">Sonraki ₺130.000</string>
+    <string name="row4dilim">Sonraki ₺260.000</string>
+    <string name="row5dilim">Sonraki ₺780.000</string>
+    <string name="row6dilim">Sonraki ₺1.040.000</string>
+    <string name="row7dilim">Sonraki ₺2.080.000</string>
+    <string name="row8dilim">₺4.160.000 fazla</string>
+    <string name="row9toplam">Toplam Ücret : </string>
+    <string name="row1ratio">%6</string>
+    <string name="row2ratio">%5</string>
+    <string name="row3ratio">%4</string>
+    <string name="row4ratio">%3</string>
+    <string name="row5ratio">%2</string>
+    <string name="row6ratio">%1.5</string>
+    <string name="row7ratio">%1</string>
+    <string name="row8ratio">%0.5</string>
+    <string name="rowPrice">-</string>
+
 </resources>
