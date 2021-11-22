@@ -6,12 +6,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.SecondPartDetailsFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/calButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="10dp">
 
         <!-- Table Heading -->
@@ -63,7 +71,7 @@
                 android:text="@string/row1dilim"
                 android:textSize="12sp"
                 android:layout_weight="4"
-                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
                 android:gravity="center_vertical"
                 />
 
@@ -79,13 +87,13 @@
                 />
 
             <TextView
+                android:id="@+id/tv50"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/rowPrice"
-                android:textSize="12sp"
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
-                />
+                android:text="@string/rowPrice"
+                android:textSize="12sp" />
 
         </TableRow>
         <TableRow>
@@ -96,7 +104,7 @@
                 android:text="@string/row2dilim"
                 android:textSize="12sp"
                 android:layout_weight="4"
-                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
                 android:gravity="center_vertical"
                 />
 
@@ -113,14 +121,14 @@
 
 
             <TextView
+                android:id="@+id/tv80"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/rowPrice"
-                android:padding="10sp"
-                android:textSize="12sp"
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
-                />
+                android:padding="10sp"
+                android:text="@string/rowPrice"
+                android:textSize="12sp" />
 
         </TableRow>
         <TableRow>
@@ -131,7 +139,7 @@
                 android:text="@string/row3dilim"
                 android:textSize="12sp"
                 android:layout_weight="4"
-                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
                 android:gravity="center_vertical"
                 />
 
@@ -147,14 +155,14 @@
                 />
 
             <TextView
+                android:id="@+id/tv130"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/rowPrice"
-                android:padding="10sp"
-                android:textSize="12sp"
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
-                />
+                android:padding="10sp"
+                android:text="@string/rowPrice"
+                android:textSize="12sp" />
 
         </TableRow>
         <TableRow>
@@ -165,7 +173,7 @@
                 android:text="@string/row4dilim"
                 android:textSize="12sp"
                 android:layout_weight="4"
-                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
                 android:gravity="center_vertical"
                 />
 
@@ -181,14 +189,14 @@
                 />
 
             <TextView
+                android:id="@+id/tv260"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/rowPrice"
-                android:padding="10sp"
-                android:textSize="12sp"
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
-                />
+                android:padding="10sp"
+                android:text="@string/rowPrice"
+                android:textSize="12sp" />
 
         </TableRow>
 
@@ -200,7 +208,7 @@
                 android:text="@string/row5dilim"
                 android:textSize="12sp"
                 android:layout_weight="4"
-                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
                 android:gravity="center_vertical"
                 />
 
@@ -216,14 +224,14 @@
                 />
 
             <TextView
+                android:id="@+id/tv780"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/rowPrice"
-                android:padding="10sp"
-                android:textSize="12sp"
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
-                />
+                android:padding="10sp"
+                android:text="@string/rowPrice"
+                android:textSize="12sp" />
 
         </TableRow>
         <TableRow>
@@ -234,7 +242,7 @@
                 android:text="@string/row6dilim"
                 android:textSize="12sp"
                 android:layout_weight="4"
-                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
                 android:gravity="center_vertical"
                 />
 
@@ -250,14 +258,14 @@
                 />
 
             <TextView
+                android:id="@+id/tv1040"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/rowPrice"
-                android:padding="10sp"
-                android:textSize="12sp"
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
-                />
+                android:padding="10sp"
+                android:text="@string/rowPrice"
+                android:textSize="12sp" />
 
         </TableRow>
         <TableRow>
@@ -268,7 +276,7 @@
                 android:text="@string/row7dilim"
                 android:textSize="12sp"
                 android:layout_weight="4"
-                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
                 android:gravity="center_vertical"
                 />
 
@@ -284,14 +292,14 @@
                 />
 
             <TextView
+                android:id="@+id/tv2080"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/rowPrice"
-                android:padding="10sp"
-                android:textSize="12sp"
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
-                />
+                android:padding="10sp"
+                android:text="@string/rowPrice"
+                android:textSize="12sp" />
 
         </TableRow>
         <TableRow>
@@ -302,7 +310,7 @@
                 android:text="@string/row8dilim"
                 android:textSize="12sp"
                 android:layout_weight="4"
-                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
                 android:gravity="center_vertical"
                 />
 
@@ -318,14 +326,14 @@
                 />
 
             <TextView
+                android:id="@+id/tv4160"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/rowPrice"
-                android:padding="10sp"
-                android:textSize="12sp"
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
-                />
+                android:padding="10sp"
+                android:text="@string/rowPrice"
+                android:textSize="12sp" />
 
         </TableRow>
         <TableRow>
@@ -341,36 +349,23 @@
                 />
 
 
-
-
             <TextView
+                android:id="@+id/tvtotal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/rowPrice"
-                android:padding="10sp"
-                android:textStyle="bold"
-                android:textSize="12sp"
                 android:layout_weight="4"
                 android:gravity="center_horizontal"
-                />
+                android:padding="10sp"
+                android:text="@string/rowPrice"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
         </TableRow>
 
 
     </TableLayout>
 
+    </ScrollView>
 
-
-
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="calculate"
-    android:id="@+id/calButton"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_margin="20dp"
-    app:layout_constraintTop_toTopOf="parent">
-</Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

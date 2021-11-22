@@ -31,7 +31,6 @@ class SecondPartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val userInput  = binding.userInputCost.text
         val firstInput : Spinner = binding.firstSpinner
         val secondInput : Spinner = binding.secondSpinner
         val thirdInput : Spinner = binding.thirdSpinner
@@ -77,7 +76,8 @@ class SecondPartFragment : Fragment() {
 
         binding.calculateButton.setOnClickListener {
             // viewModel.calculateSecondPartPrice(userInput.toString().toDouble(),firstInput.selectedItemPosition, secondInput.selectedItemPosition, thirdInput.selectedItemPosition, fourthInput.selectedItemPosition)
-            Navigation.findNavController(it).navigate(SecondPartFragmentDirections.actionSecondPartFragmentToSecondPartDetailsFragment(userInput.toString(),firstInput.selectedItemPosition, secondInput.selectedItemPosition, thirdInput.selectedItemPosition, fourthInput.selectedItemPosition))
+
+            Navigation.findNavController(it).navigate(SecondPartFragmentDirections.actionSecondPartFragmentToSecondPartDetailsFragment(binding.userInputCost.text.toString(),firstInput.selectedItemPosition, secondInput.selectedItemPosition, thirdInput.selectedItemPosition, fourthInput.selectedItemPosition))
 
 
         }

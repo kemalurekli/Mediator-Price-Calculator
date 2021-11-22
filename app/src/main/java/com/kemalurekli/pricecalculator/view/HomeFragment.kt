@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
             Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToFirstPartFragment())
         }
         binding.goToSecondPartButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToSecondPartFragment())
+            Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToSecondOptionFragment())
         }
         binding.goToDatePartButton.setOnClickListener {
             Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToDatePartFragment())

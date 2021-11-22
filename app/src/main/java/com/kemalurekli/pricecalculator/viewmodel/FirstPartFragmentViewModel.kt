@@ -6,7 +6,6 @@ import com.kemalurekli.pricecalculator.model.ParameterForFirstPart
 
 
 class FirstPartFragmentViewModel : ViewModel() {
-
     var priceOffirstPart = 0
 
     private val parameterFamily = ParameterForFirstPart("340","360","380","400")
