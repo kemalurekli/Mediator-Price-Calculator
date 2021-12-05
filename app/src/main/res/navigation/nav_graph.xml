@@ -81,5 +81,40 @@
         <action
             android:id="@+id/action_secondOptionFragment_to_secondPartFragment"
             app:destination="@id/secondPartFragment" />
+        <action
+            android:id="@+id/action_secondOptionFragment_to_secondPartIhtiyariFragment"
+            app:destination="@id/secondPartIhtiyariFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondPartIhtiyariFragment"
+        android:name="com.kemalurekli.pricecalculator.view.SecondPartIhtiyariFragment"
+        android:label="fragment_second_part_ihtiyari"
+        tools:layout="@layout/fragment_second_part_ihtiyari" >
+        <action
+            android:id="@+id/action_secondPartIhtiyariFragment_to_secondPartIhtiyariDetailsFragment"
+            app:destination="@id/secondPartIhtiyariDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondPartIhtiyariDetailsFragment"
+        android:name="com.kemalurekli.pricecalculator.view.SecondPartIhtiyariDetailsFragment"
+        android:label="SecondPartIhtiyariDetailsFragment" >
+        <argument
+            android:name="userInputA"
+            app:argType="string"
+            android:defaultValue="0.0" />
+        <argument
+            android:name="select1A"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="select2A"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="select3A"
+            android:defaultValue="0" />
+        <argument
+            android:name="select4A"
+            android:defaultValue="0" />
     </fragment>
 </navigation>

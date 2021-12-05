@@ -14,7 +14,6 @@ class SecondOptionFragment : Fragment() {
 
     private var _binding: FragmentSecondOptionBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,13 +29,12 @@ class SecondOptionFragment : Fragment() {
         binding.btnDavaSarti.setOnClickListener {
             Navigation.findNavController(it).navigate(SecondOptionFragmentDirections.actionSecondOptionFragmentToSecondPartFragment())
         }
+        binding.btnIhtiyari.setOnClickListener {
+            Navigation.findNavController(it).navigate(SecondOptionFragmentDirections.actionSecondOptionFragmentToSecondPartIhtiyariFragment())
+        }
     }
-
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }

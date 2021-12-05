@@ -1,14 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.DatePartFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_date"
+        android:layout_margin="10dp"
+        android:text="Lütfen Arabuluculuk Görevinin Kabul Edildiği Tarihi giriniz."
+        android:textColor="@color/black"
+        android:textSize="16sp">
+    </TextView>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/pickDateBtn"
+        android:text="Tarih Gir"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/tv_accept_date"
+        android:textColor="@color/black"
+        android:textSize="16sp">
+    </TextView>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_table"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TableLayout
+            android:layout_width="590dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@android:color/white">
+
+            <!-- Table Heading -->
+
+            <TableRow android:background="@color/colorMain">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:text="Uyuşmazlık Türü"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="3. Hafta"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:text="4. Hafta"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:padding="10sp"
+                    android:text="6. Hafta"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:padding="10sp"
+                    android:text="8. Hafta"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+
+            </TableRow>
+
+            <!-- Table Data -->
+
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:text="İş Hukuku Uyuşmazlıkları	"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/tvis3"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/tvis4"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:id="@+id/tvis6"
+                    android:gravity="center_horizontal"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:id="@+id/tvis8"
+                    android:gravity="center_horizontal"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:text="Ticari Uyuşmazlıklar"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:id="@+id/tvti6"
+                    android:gravity="center_horizontal"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:id="@+id/tvti8"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:padding="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:text="Tüketici Hukuku Uyuşmazlıkları"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:id="@+id/tvtu3"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:id="@+id/tvtu4"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/empty_date"
+                    android:textSize="12sp" />
+
+            </TableRow>
+
+        </TableLayout>
+</LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

@@ -5,28 +5,32 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.kemalurekli.pricecalculator.R
-import com.kemalurekli.pricecalculator.databinding.FragmentSecondPartDetailsBinding
-import com.kemalurekli.pricecalculator.viewmodel.SecondPartDetailsFragmentViewModel
+import com.kemalurekli.pricecalculator.databinding.FragmentSecondPartIhtiyariDetailsBinding
+import com.kemalurekli.pricecalculator.viewmodel.SecondPartIhtiyariDetailsFragmentViewModel
 
+class SecondPartIhtiyariDetailsFragment : Fragment() {
 
-class SecondPartDetailsFragment : Fragment() {
-    private var _binding: FragmentSecondPartDetailsBinding? = null
+    private var _binding: FragmentSecondPartIhtiyariDetailsBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel : SecondPartDetailsFragmentViewModel
+    private lateinit var viewModel : SecondPartIhtiyariDetailsFragmentViewModel
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSecondPartDetailsBinding.inflate(inflater, container, false)
+        _binding = FragmentSecondPartIhtiyariDetailsBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this)[SecondPartDetailsFragmentViewModel::class.java]
+        viewModel = ViewModelProvider(this)[SecondPartIhtiyariDetailsFragmentViewModel::class.java]
         arguments?.let {
             val userInputPrice = SecondPartDetailsFragmentArgs.fromBundle(it).userInputA
             val select1 = SecondPartDetailsFragmentArgs.fromBundle(it).select1A
@@ -35,6 +39,7 @@ class SecondPartDetailsFragment : Fragment() {
             val select4 = SecondPartDetailsFragmentArgs.fromBundle(it).select4A
             //Mediator Ratio
             SetView(userInputPrice.toDouble(),select1,select2,select3,select4)
+
         }
     }
     private fun SetView(userInput : Double, selection1 : Int,  selection2 : Int, selection3: Int, selection4: Int){
@@ -57,7 +62,9 @@ class SecondPartDetailsFragment : Fragment() {
             binding.row6ratio.text = "%2.5"
             binding.row7ratio.text = "%1.5"
             binding.row8ratio.text = "%1"
-    }
+        }
+
+
 
     }
 

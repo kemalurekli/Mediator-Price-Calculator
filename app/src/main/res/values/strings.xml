@@ -31,5 +31,9 @@
     <string name="row8ratio">%0.5</string>
     <string name="rowPrice">-</string>
     <string name="calculate">Hesapla</string>
+    <string name="ihtiyari_uyusmazlik">İhtiyari Uyuşmazlık</string>
+    <string name="dava_sarti_kapsamındaki_uyusmazlıklar">Dava Şartı Kapsamındaki Uyuşmazlıklar</string>
+    <string name="abc">def</string>
+    <string name="empty_date">-</string>
 
 </resources>

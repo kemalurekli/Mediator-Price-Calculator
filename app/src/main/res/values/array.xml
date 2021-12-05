@@ -20,14 +20,10 @@
     </string-array>
     <string-array name="second_part_second_spinner">
         <item>Dava Şartı Kapsamındaki Uyuşmazlıklar</item>
-        <item>İhtiyari Uyuşmazlık</item>
     </string-array>
     <string-array name="second_part_third_spinner">
-        <item>Aile Hukuku Uyuşmazlıkları</item>
+        <item>İş - Tüketici Uyuşmazlıkları</item>
         <item>Ticari Uyuşmazlık</item>
-        <item>İş Hukuku Uyuşmazlıkları</item>
-        <item>Tüketici Uyuşmazlıkları</item>
-        <item>Diğer Uyuşmazlıklar</item>
     </string-array>
     <string-array name="second_part_fourth_spinner">
         <item>2 taraflı işlerde</item>
@@ -35,4 +31,15 @@
         <item>6-10 taraflı işlerde</item>
         <item>11 + taraflı işlerde</item>
     </string-array>
+    <string-array name="second_part_ihtiyari_second_spinner">
+        <item>İhtiyari Uyuşmazlık</item>
+    </string-array>
+    <string-array name="second_part_ihtiyari_third_spinner">
+        <item>Aile Hukuku Uyuşmazlıkları</item>
+        <item>Ticari Uyuşmazlık</item>
+        <item>İş Hukuku Uyuşmazlıkları</item>
+        <item>Tüketici Uyuşmazlıkları</item>
+        <item>Diğer Uyuşmazlıklar</item>
+    </string-array>
+
 </resources>

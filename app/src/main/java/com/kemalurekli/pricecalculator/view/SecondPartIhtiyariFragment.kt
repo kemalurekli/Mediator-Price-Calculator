@@ -1,5 +1,5 @@
 package com.kemalurekli.pricecalculator.view
-import android.content.res.Resources
+
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,39 +9,47 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.activity.OnBackPressedCallback
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.kemalurekli.pricecalculator.R
-import com.kemalurekli.pricecalculator.databinding.FragmentSecondPartBinding
-import java.util.*
-class SecondPartFragment : Fragment() {
-    private var _binding: FragmentSecondPartBinding? = null
+import com.kemalurekli.pricecalculator.databinding.FragmentSecondPartIhtiyariBinding
+import com.kemalurekli.pricecalculator.viewmodel.SecondPartDetailsFragmentViewModel
+import com.kemalurekli.pricecalculator.viewmodel.SecondPartIhtiyariFragmentViewModel
+
+class SecondPartIhtiyariFragment : Fragment() {
+
+    private var _binding: FragmentSecondPartIhtiyariBinding? = null
     private val binding get() = _binding!!
+    private lateinit var viewModel : SecondPartIhtiyariFragmentViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSecondPartBinding.inflate(inflater, container, false)
+        _binding = FragmentSecondPartIhtiyariBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val firstInput : Spinner = binding.firstSpinner
         val secondInput : Spinner = binding.secondSpinner
         val thirdInput : Spinner = binding.thirdSpinner
         val fourthInput : Spinner = binding.fourthSpinner
+
         binding.calculateButton.visibility = View.INVISIBLE
+
         //Spinner Adapters
         ArrayAdapter.createFromResource(requireContext(), R.array.second_part_first_spinner, android.R.layout.simple_spinner_item).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             firstInput.adapter = adapter
         }
-        ArrayAdapter.createFromResource(requireContext(), R.array.second_part_second_spinner, android.R.layout.simple_spinner_item).also { adapter2 ->
+        ArrayAdapter.createFromResource(requireContext(), R.array.second_part_ihtiyari_second_spinner, android.R.layout.simple_spinner_item).also { adapter2 ->
             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             secondInput.adapter = adapter2
         }
-        ArrayAdapter.createFromResource(requireContext(), R.array.second_part_third_spinner, android.R.layout.simple_spinner_item).also { adapter3 ->
+        ArrayAdapter.createFromResource(requireContext(), R.array.second_part_ihtiyari_third_spinner, android.R.layout.simple_spinner_item).also { adapter3 ->
             adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             thirdInput.adapter = adapter3
         }
@@ -49,12 +57,14 @@ class SecondPartFragment : Fragment() {
             adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             fourthInput.adapter = adapter4
         }
-        // User input control
-        binding.userInputCost.addTextChangedListener(object : TextWatcher{
+
+        binding.userInputCost.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
+
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             }
+
             override fun afterTextChanged(s: Editable?) {
                 if (binding.userInputCost.text.toString() == "" || binding.userInputCost.text.toString() ==".") {
                     binding.userInputCost.text.clear()
@@ -63,11 +73,21 @@ class SecondPartFragment : Fragment() {
                     binding.calculateButton.visibility = View.VISIBLE
                 }
             }
+
         })
+
         binding.calculateButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(SecondPartFragmentDirections.actionSecondPartFragmentToSecondPartDetailsFragment(binding.userInputCost.text.toString(),firstInput.selectedItemPosition, secondInput.selectedItemPosition, thirdInput.selectedItemPosition, fourthInput.selectedItemPosition))
+            // viewModel.calculateSecondPartPrice(userInput.toString().toDouble(),firstInput.selectedItemPosition, secondInput.selectedItemPosition, thirdInput.selectedItemPosition, fourthInput.selectedItemPosition)
+
+            Navigation.findNavController(it).navigate(SecondPartIhtiyariFragmentDirections.actionSecondPartIhtiyariFragmentToSecondPartIhtiyariDetailsFragment(binding.userInputCost.text.toString(),firstInput.selectedItemPosition, secondInput.selectedItemPosition, thirdInput.selectedItemPosition, fourthInput.selectedItemPosition))
+
+
         }
     }
+
+
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

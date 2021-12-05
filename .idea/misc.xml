@@ -3,20 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/drawable/input_areas.xml" value="0.16927083333333334" />
         <entry key="app/src/main/res/drawable/menu_items.xml" value="0.16927083333333334" />
         <entry key="app/src/main/res/drawable/result_bg.xml" value="0.16927083333333334" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22644927536231885" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.3188405797101449" />
-        <entry key="app/src/main/res/layout/fragment_date_part.xml" value="0.153125" />
+        <entry key="app/src/main/res/layout/fragment_date_part.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_first_part.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.153125" />
         <entry key="app/src/main/res/layout/fragment_second_option.xml" value="0.2667572463768116" />
         <entry key="app/src/main/res/layout/fragment_second_part.xml" value="0.23097826086956522" />
         <entry key="app/src/main/res/layout/fragment_second_part_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_second_part_ihtiyari.xml" value="0.26268115942028986" />
+        <entry key="app/src/main/res/layout/fragment_second_part_ihtiyari_details.xml" value="0.245018115942029" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19635416666666666" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
