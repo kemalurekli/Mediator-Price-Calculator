@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.gms.ads.*
 import com.kemalurekli.pricecalculator.R
 import com.kemalurekli.pricecalculator.databinding.FragmentFirstPartBinding
 import com.kemalurekli.pricecalculator.viewmodel.FirstPartFragmentViewModel
@@ -17,6 +18,7 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private var _binding: FragmentFirstPartBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel : FirstPartFragmentViewModel
+    lateinit var mAdView : AdView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,6 +31,11 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[FirstPartFragmentViewModel::class.java]
         //viewModel.getParameters()
+        MobileAds.initialize(requireContext()) {}
+
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
         //For Spinner
         val spinner: Spinner = binding.firstSpinner
         val spinner2 : Spinner = binding.secondSpinner
@@ -56,7 +63,7 @@ class FirstPartFragment : Fragment(), AdapterView.OnItemSelectedListener {
             {
                 val userInput = binding.userInputTime.text.toString().toInt()
                 val result = viewModel.calculateFirstPart(userInput,spinner1Position,spinner2Position)
-                binding.tvFirstPartExp.text = "${spinner.selectedItem.toString()} ${spinner2.selectedItem.toString()} ${userInput} saat için Hesaplanan Değer : $result Türk Lirası olarak hesaplanmıştır. "
+                binding.tvFirstPartExp.text = "${spinner.selectedItem.toString()} ${spinner2.selectedItem.toString()} ${userInput} saat için : $result Türk Lirası olarak hesaplanmıştır. "
             }
         }
     }

@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.kemalurekli.pricecalculator.R
 import com.kemalurekli.pricecalculator.databinding.FragmentSecondPartDetailsBinding
 import com.kemalurekli.pricecalculator.viewmodel.SecondPartDetailsFragmentViewModel
@@ -15,6 +18,7 @@ import com.kemalurekli.pricecalculator.viewmodel.SecondPartDetailsFragmentViewMo
 class SecondPartDetailsFragment : Fragment() {
     private var _binding: FragmentSecondPartDetailsBinding? = null
     private val binding get() = _binding!!
+    lateinit var mAdView : AdView
     private lateinit var viewModel : SecondPartDetailsFragmentViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +30,12 @@ class SecondPartDetailsFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //For Ads
+        MobileAds.initialize(requireContext()) {}
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+
         viewModel = ViewModelProvider(this)[SecondPartDetailsFragmentViewModel::class.java]
         arguments?.let {
             val userInputPrice = SecondPartDetailsFragmentArgs.fromBundle(it).userInputA

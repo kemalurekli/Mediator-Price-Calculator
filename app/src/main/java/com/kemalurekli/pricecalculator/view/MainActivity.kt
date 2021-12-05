@@ -2,7 +2,6 @@ package com.kemalurekli.pricecalculator.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.kemalurekli.pricecalculator.R
 import com.kemalurekli.pricecalculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

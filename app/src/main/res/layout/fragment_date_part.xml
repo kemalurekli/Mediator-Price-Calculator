@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".view.DatePartFragment">
 
@@ -47,7 +48,7 @@
         android:orientation="horizontal"
         >
         <TableLayout
-            android:layout_width="590dp"
+            android:layout_width="480dp"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:background="@android:color/white">
@@ -267,6 +268,18 @@
 
         </TableLayout>
 </LinearLayout>
+
     </HorizontalScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+
 
 </LinearLayout>

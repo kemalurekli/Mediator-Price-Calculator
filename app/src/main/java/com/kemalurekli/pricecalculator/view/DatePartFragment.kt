@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.kemalurekli.pricecalculator.databinding.FragmentDatePartBinding
-import java.time.Year
 import java.util.*
 import java.util.Calendar.DAY_OF_MONTH
 
@@ -16,6 +18,7 @@ class DatePartFragment : Fragment() {
 
     private var _binding: FragmentDatePartBinding? = null
     private val binding get() = _binding!!
+    lateinit var mAdView : AdView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +31,12 @@ class DatePartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //For Ads
+        MobileAds.initialize(requireContext()) {}
+        mAdView = binding.adView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+
         val mPickTimeBtn = binding.pickDateBtn
         val c = Calendar.getInstance()
         val year = c.get(Calendar.YEAR)
